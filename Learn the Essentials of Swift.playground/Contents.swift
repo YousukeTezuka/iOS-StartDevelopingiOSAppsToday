@@ -23,11 +23,11 @@ let actualInt: Int = optionalInt!
 //let actualInt = optionalInt!
 
 var myString = "7"
-var possibleInt = myString.toInt()
+var possibleInt = Int(myString)
 print(possibleInt)
 
 myString = "banana"
-possibleInt = myString.toInt()
+possibleInt = Int(myString)
 print(possibleInt)
 
 var ratingList = ["Poor", "Fine", "Good", "Excellent"]
@@ -97,9 +97,9 @@ func greet(name: String, day: String) -> String {
     return "Hello \(name), today is \(day)"
 }
 
-greet("Anna", "Thuesday")
-greet("Bob", "Friday")
-greet("Charlie", "a nice day")
+greet("Anna", day: "Thuesday")
+greet("Bob", day: "Friday")
+greet("Charlday: ie", day: "a nice day")
 
 let exampleString = "hello"
 if exampleString.hasSuffix("lo") {
@@ -187,9 +187,9 @@ let shapesArray = [Triangle(sideLength: 1.5, name: "triangle1"), Triangle(sideLe
 var squares = 0
 var triangles = 0
 for shape in shapesArray {
-    if let square = shape as! Square {
+    if let square = shape as? Square {
         squares++
-    } else if let triangle = shape as! Triangle {
+    } else if let triangle = shape as? Triangle {
         triangles++
     }
 }
