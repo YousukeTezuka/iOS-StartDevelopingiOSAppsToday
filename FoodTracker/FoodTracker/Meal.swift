@@ -10,10 +10,10 @@ class Meal {
     
     // MARK: Initialization
     
-    init?(name: String, image: UIImage?, rating: Int) {
+    init?(name: String, photo: UIImage?, rating: Int) {
         // Initialize restore properties.
         self.name = name
-        self.image = image
+        self.image = photo
         self.rating = rating
         
         // Initialization should fail if there is no name or if the rating is negative.
